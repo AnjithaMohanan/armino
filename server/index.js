@@ -4,20 +4,17 @@ const dotenv=require('dotenv')
 const mongoose=require('mongoose')
  const cors=require('cors')
  const cookieParser=require('cookie-parser')
-// const bodyParser = require('body-parser');
 
-// const jwt = require('jsonwebtoken')
-// const User=require('./models/userModel')
 
  require('dotenv').config();
 app.use(express.json())
 app.use(cookieParser())
-//app.use(bodyParser.json())
+
 app.use(cors({
     credentials: true,
     origin:[ 'http://localhost:8080' ]
 }))
-// app.use(express.urlencoded({ extended: true }))
+
 
 
 const mongoString = process.env.MONGODB;
